@@ -4,4 +4,10 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="CalendarEvent\Events\" />
+    <Folder Include="Calendar\Events\" />
+    <Folder Include="Calendar\Rules\" />
+  </ItemGroup>
+
 </Project>
