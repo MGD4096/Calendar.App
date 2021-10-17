@@ -6,8 +6,8 @@
 
   <ItemGroup>
     <Folder Include="CalendarEvent\Events\" />
-    <Folder Include="Calendar\Events\" />
-    <Folder Include="Calendar\Rules\" />
+    <Folder Include="Calendars\Events\" />
+    <Folder Include="Calendars\Rules\" />
   </ItemGroup>
 
 </Project>

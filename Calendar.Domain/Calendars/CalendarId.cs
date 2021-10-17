@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calendar.Domain.Calendar
+namespace Calendar.Domain.Calendars
 {
-    public class Calendar
+    public class CalendarId
     {
     }
 }

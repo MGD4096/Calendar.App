@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendar.Domain", "Calendar.Domain\Calendar.Domain.csproj", "{1973888A-1DBF-44D7-929B-346617798DEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calendar.Domain", "Calendar.Domain\Calendar.Domain.csproj", "{1973888A-1DBF-44D7-929B-346617798DEA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{55F56FDA-9947-453C-A64D-7C107C2077B3}"
 EndProject
@@ -19,17 +19,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ClientApp", "ClientApp", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calendar.Api", "Calendar.Api\Calendar.Api.csproj", "{699B3BF4-C7AA-4CCF-89FF-B6FE04786D49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendar.UnitTest", "Calendar.UnitTest\Calendar.UnitTest.csproj", "{89E43D47-9990-4ADF-B415-CAAC4FC7607E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calendar.UnitTest", "Calendar.UnitTest\Calendar.UnitTest.csproj", "{89E43D47-9990-4ADF-B415-CAAC4FC7607E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildinBlocks", "BuildinBlocks", "{0FCF3D77-F7FE-4F18-94E3-801A7D1683D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.BuildingBlocks.Application", "Domain.BuildingBlocks.Application\Domain.BuildingBlocks.Application.csproj", "{27BF0709-DD3F-4B61-AC2C-381ECD636F18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.BuildingBlocks.Application", "Domain.BuildingBlocks.Application\Domain.BuildingBlocks.Application.csproj", "{27BF0709-DD3F-4B61-AC2C-381ECD636F18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.BuildingBlocks.Domain", "Domain.BuildingBlocks.Domain\Domain.BuildingBlocks.Domain.csproj", "{56D250E5-9253-4D8C-9A25-A6A81CB2BEA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.BuildingBlocks.Domain", "Domain.BuildingBlocks.Domain\Domain.BuildingBlocks.Domain.csproj", "{56D250E5-9253-4D8C-9A25-A6A81CB2BEA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.BuildingBlocks.EventBus", "Domain.BuildingBlocks.EventBus\Domain.BuildingBlocks.EventBus.csproj", "{047D22C3-6D0F-4629-A602-0A6B35794E7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.BuildingBlocks.EventBus", "Domain.BuildingBlocks.EventBus\Domain.BuildingBlocks.EventBus.csproj", "{047D22C3-6D0F-4629-A602-0A6B35794E7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.BuildingBlocks.Infrastructure", "Domain.BuildingBlocks.Infrastructure\Domain.BuildingBlocks.Infrastructure.csproj", "{B8C67601-74D7-40A6-BA59-88C25CDCBD4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.BuildingBlocks.Infrastructure", "Domain.BuildingBlocks.Infrastructure\Domain.BuildingBlocks.Infrastructure.csproj", "{B8C67601-74D7-40A6-BA59-88C25CDCBD4D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{73366CFE-FF64-42E3-AEFA-2ACF751DD8DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "User", "User", "{7D19D27C-FC39-4F7D-84A9-B38631AA7D21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +57,10 @@ Global
 		{699B3BF4-C7AA-4CCF-89FF-B6FE04786D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{699B3BF4-C7AA-4CCF-89FF-B6FE04786D49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{699B3BF4-C7AA-4CCF-89FF-B6FE04786D49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89E43D47-9990-4ADF-B415-CAAC4FC7607E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89E43D47-9990-4ADF-B415-CAAC4FC7607E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89E43D47-9990-4ADF-B415-CAAC4FC7607E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89E43D47-9990-4ADF-B415-CAAC4FC7607E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{27BF0709-DD3F-4B61-AC2C-381ECD636F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{27BF0709-DD3F-4B61-AC2C-381ECD636F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27BF0709-DD3F-4B61-AC2C-381ECD636F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -69,10 +77,6 @@ Global
 		{B8C67601-74D7-40A6-BA59-88C25CDCBD4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8C67601-74D7-40A6-BA59-88C25CDCBD4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8C67601-74D7-40A6-BA59-88C25CDCBD4D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{89E43D47-9990-4ADF-B415-CAAC4FC7607E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{89E43D47-9990-4ADF-B415-CAAC4FC7607E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{89E43D47-9990-4ADF-B415-CAAC4FC7607E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{89E43D47-9990-4ADF-B415-CAAC4FC7607E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,11 +87,13 @@ Global
 		{A87E712E-1B4B-4272-833F-69CE54A44A06} = {C589C6AB-50CD-42EE-8ACC-4689D6A5C889}
 		{C589C6AB-50CD-42EE-8ACC-4689D6A5C889} = {55F56FDA-9947-453C-A64D-7C107C2077B3}
 		{699B3BF4-C7AA-4CCF-89FF-B6FE04786D49} = {7ECE651E-3034-4175-8B4D-6DABF3202264}
+		{89E43D47-9990-4ADF-B415-CAAC4FC7607E} = {73366CFE-FF64-42E3-AEFA-2ACF751DD8DD}
 		{27BF0709-DD3F-4B61-AC2C-381ECD636F18} = {0FCF3D77-F7FE-4F18-94E3-801A7D1683D4}
 		{56D250E5-9253-4D8C-9A25-A6A81CB2BEA5} = {0FCF3D77-F7FE-4F18-94E3-801A7D1683D4}
 		{047D22C3-6D0F-4629-A602-0A6B35794E7D} = {0FCF3D77-F7FE-4F18-94E3-801A7D1683D4}
 		{B8C67601-74D7-40A6-BA59-88C25CDCBD4D} = {0FCF3D77-F7FE-4F18-94E3-801A7D1683D4}
-		{89E43D47-9990-4ADF-B415-CAAC4FC7607E} = {C589C6AB-50CD-42EE-8ACC-4689D6A5C889}
+		{73366CFE-FF64-42E3-AEFA-2ACF751DD8DD} = {C589C6AB-50CD-42EE-8ACC-4689D6A5C889}
+		{7D19D27C-FC39-4F7D-84A9-B38631AA7D21} = {55F56FDA-9947-453C-A64D-7C107C2077B3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {53E906CA-7B02-4A2F-BEFF-57A79F93B563}

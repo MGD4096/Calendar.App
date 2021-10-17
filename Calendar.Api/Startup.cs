@@ -18,6 +18,9 @@ using Domain.BuildingBlocks.Infrastructure.Emails;
 using Domain.BuildingBlocks.Application;
 using Domain.BuildingBlocks.Domain;
 using Calendar.Api.Configuration.Validation;
+using Autofac.Extensions.DependencyInjection;
+using Calendar.Api.Modules.Calendar;
+using Calendar.Infrastructure.Configuration;
 
 namespace Calendar.Api
 {
