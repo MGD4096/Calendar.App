@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Domain.BuildingBlocks.Domain;
-using Domain.BuildingBlocks.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace Domain.BuildingBlocks.Infrastructure.DomainEventsDispatching
