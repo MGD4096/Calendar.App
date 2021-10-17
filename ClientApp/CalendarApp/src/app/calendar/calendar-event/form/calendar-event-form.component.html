@@ -1,0 +1,74 @@
+<form [formGroup]="myForm">
+
+    <mat-form-field appearance="fill" class="w-100">
+      <mat-label>{{'CALENDAR.EVENT.ADDEDIT.TYP' | translate}}</mat-label>
+      <mat-select matNativeControl formControlName="type">
+        <mat-option value="event">{{'CALENDAR.EVENT.ADDEDIT.CALENDAREVENT' | translate}}</mat-option>
+        <mat-option value="holiday">{{'CALENDAR.EVENT.ADDEDIT.HOLIDAY' | translate}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="w-100">
+      <mat-label>{{'CALENDAR.EVENT.ADDEDIT.NAME' | translate}}</mat-label>
+      <input type="text" matInput formControlName="eventName">
+    </mat-form-field>
+    <mat-form-field class="w-100">
+      <mat-label>{{'CALENDAR.EVENT.ADDEDIT.DESCRIPTION' | translate}}</mat-label>
+      <input type="text" matInput formControlName="eventDescription">
+    </mat-form-field>
+  <div class="form-group">
+    <mat-checkbox [checked]="sendNotification"
+                  (change)="hideNotificationField($event.checked? false:true)">
+      {{'CALENDAR.EVENT.ADDEDIT.SENDNOTIFICATION' | translate}}
+    </mat-checkbox>
+  </div>
+  <div id="notification-group" [ngClass]="{'d-none':!sendNotification}">
+    <div class="form-group">
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-label>{{'CALENDAR.EVENT.ADDEDIT.NOTIFICATIONMETHOD' | translate}}</mat-label>
+        <mat-select matNativeControl formControlName="notificationMethod" multiple>
+          <mat-option value="MAIL">Mail</mat-option>
+          <mat-option value="SMS">SMS</mat-option>
+          <mat-option value="PUSH">Push</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field class="w-100">
+        <mat-label>{{'CALENDAR.EVENT.ADDEDIT.NOTIFICATIONBEFORE' | translate}}</mat-label>
+        <input type="time" matInput formControlName="notificationBefore">
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="form-group">
+    <mat-checkbox [checked]="allDay"
+                  (change)="this.myForm.get('allDayEvent').setValue($event.checked? 'true':'false');hideEndDate($event.checked? true:false)">
+      {{'CALENDAR.EVENT.ADDEDIT.ALLDAYEVENT' | translate}}
+    </mat-checkbox>
+  </div>
+  <div class="form-group">
+    <mat-form-field class="w-100">
+      <mat-label>{{'CALENDAR.EVENT.ADDEDIT.STARTDATE' | translate}}</mat-label>
+      <input matInput [matDatepicker]="StartDateDatepicker" formControlName="startDate">
+      <mat-datepicker-toggle matSuffix [for]="StartDateDatepicker"></mat-datepicker-toggle>
+      <mat-datepicker #StartDateDatepicker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="w-100">
+      <mat-label>{{'CALENDAR.EVENT.ADDEDIT.STARTTIME' | translate}}</mat-label>
+      <input matInput type="time" formControlName="startTime">
+    </mat-form-field>
+
+  </div>
+  <div id="endDate" class="form-group">
+    <mat-form-field class="w-100">
+      <mat-label>{{'CALENDAR.EVENT.ADDEDIT.ENDDATE' | translate}}</mat-label>
+      <input matInput [matDatepicker]="EndDateDatepicker" formControlName="endDate">
+      <mat-datepicker-toggle matSuffix [for]="EndDateDatepicker"></mat-datepicker-toggle>
+      <mat-datepicker #EndDateDatepicker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="w-100">
+      <mat-label>{{'CALENDAR.EVENT.ADDEDIT.ENDTIME' | translate}}</mat-label>
+      <input matInput type="time" formControlName="endTime">
+    </mat-form-field>
+  </div>
+</form>

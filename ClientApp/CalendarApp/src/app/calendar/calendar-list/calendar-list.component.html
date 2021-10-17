@@ -1,0 +1,53 @@
+<div class="example-table-container" *ngIf="loaded">
+  <button mat-raised-button color="primary" (click)="openAddFormModal()">{{'CALENDAR.LIST.ADDCALENDAR' | translate}}</button>
+  <table mat-table [dataSource]="dt" class="example-table w-100" matSort (matSortChange)="sortData($event)">
+    <ng-container matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef>
+        <!--<mat-checkbox (change)="$event ? masterToggle() : null"
+                      [checked]="selection.hasValue() && isAllSelected()"
+                      [indeterminate]="selection.hasValue() && !isAllSelected()">
+        </mat-checkbox>-->
+      </th>
+      <td mat-cell *matCellDef="let row">
+        <mat-checkbox (click)="$event.stopPropagation()"
+                      (change)="$event ? changeSelection(row): null"
+                      [checked]="selection.isSelected(row)">
+        </mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="calendarId">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>
+        Id
+      </th>
+      <td mat-cell *matCellDef="let row">{{row.calendarId }}</td>
+    </ng-container>
+    <ng-container matColumnDef="calendarName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>{{'CALENDAR.LIST.CALENDARNAME' | translate}}</th>
+      <td mat-cell *matCellDef="let row">{{row.calendarName}}</td>
+    </ng-container>
+    <ng-container matColumnDef="calendarDescription">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>{{'CALENDAR.LIST.CALENDARDESCRIPTION' | translate}}</th>
+      <td mat-cell *matCellDef="let row">{{row.calendarDescription}}</td>
+    </ng-container>
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>{{'CALENDAR.LIST.ACTIONS' | translate}}</th>
+      <td mat-cell *matCellDef="let row">
+        <div class="btn-group dropdown">
+          <a href="javascript: void(0);" class="table-action-btn dropdown-toggle arrow-none btn btn-light btn-sm" data-toggle="dropdown" aria-expanded="false">
+            <mat-icon>keyboard_arrow_down</mat-icon>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" (click)="openEditFormModal(row.calendarId)"><i class="mdi mdi-pencil mr-2 text-muted font-18 vertical-middle"></i>{{'CALENDAR.LIST.EDIT' | translate}}</a>
+            <a class="dropdown-item" (click)="openDeleteFormModal(row.calendarId)"><i class="mdi mdi-check-all mr-2 text-muted font-18 vertical-middle"></i>{{'CALENDAR.LIST.DELETE' | translate}}</a>
+          </div>
+        </div>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+
+<mat-paginator [pageSize]="pageSize"
+               [pageSizeOptions]="pageSizeOptions"
+               showFirstLastButtons></mat-paginator>
