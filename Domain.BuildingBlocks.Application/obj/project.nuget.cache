@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "n8uFzbNww5CD09jUO+OD1BwnWKvvHOVlfdaMFrTDzDPychDzCANPZBUACGL3cpzDx1ZnV9aLzwE0oMk5qYHOTA==",
+  "success": true,
+  "projectFilePath": "D:\\VisualStudioWorkspace\\Calendar\\Calendar.App\\Domain.BuildingBlocks.Application\\Domain.BuildingBlocks.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mateu\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
