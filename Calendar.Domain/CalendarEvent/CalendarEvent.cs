@@ -64,24 +64,27 @@ namespace Calendar.Domain.CalendarEvents
         public TimeSpan? NotifyBefore { get; protected set; }
         public UserId CreateBy { get; protected set; }
         public UserId UpdateBy { get; protected set; }
-        public void ChangeMainAttributes(string eventName,string eventDescription)
+        public void ChangeMainAttributes(string eventName,string eventDescription, UserId user)
         {
             EventDescription = eventDescription;
             EventName = eventName;
             UpdateDate = DateTime.Now;
+            this.UpdateBy = user;
             this.AddDomainEvent(new MainAttributeChandedDomainEvent(this.EventId));
         }
-        public void ChangeDatesOfEvent(DateTime startDate,DateTime endDate)
+        public void ChangeDatesOfEvent(DateTime startDate,DateTime endDate, UserId user)
         {
             this.CheckRule(new StartDateMustBeBeforeEndDateRule(startDate, endDate));
             StartDate = startDate;
             EndDate = endDate;
             UpdateDate = DateTime.Now;
+            this.UpdateBy = user;
             this.AddDomainEvent(new DatesOfEventChangesDomainEvent(this.EventId));
         }
-        public void RemoveEvent()
+        public void RemoveEvent(UserId user)
         {
             this.IsRemoved = true;
+            this.UpdateBy = user;
             UpdateDate = DateTime.Now;
             this.AddDomainEvent(new EventWasRemovedDomainEvent(this.EventId));
         }
