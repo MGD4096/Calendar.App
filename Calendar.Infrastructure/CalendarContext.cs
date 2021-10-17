@@ -13,6 +13,7 @@ namespace Calendar.Infrastructure
     public class CalendarContext:DbContext
     {
         public DbSet<Calendar.Domain.Calendars.Calendar> Calendar { get; set; }
+        public DbSet<Calendar.Domain.CalendarEvents.CalendarEvent> CalendarEvents { get; set; }
         public DbSet<OutboxMessage> OutboxMessages { get; set; }
 
         public DbSet<InternalCommand> InternalCommands { get; set; }

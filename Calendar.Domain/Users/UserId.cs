@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calendar.Domain.Calendars
+namespace Calendar.Domain.Users
 {
-    public class CalendarId : TypedIdValueBase
+    public class UserId : TypedIdValueBase
     {
-        public CalendarId(Guid value)
+        public UserId(Guid value)
             : base(value)
         {
         }

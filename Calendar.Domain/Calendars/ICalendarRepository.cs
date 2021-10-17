@@ -8,7 +8,7 @@ namespace Calendar.Domain.Calendars
 {
     public interface ICalendarRepository
     {
-        Task AddAsync(Calendar device);
+        Task AddAsync(Calendar calendar);
 
         Task<Calendar> GetByIdAsync(CalendarId id);
         Task<int> Commit();
