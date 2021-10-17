@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="10.3.3" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.11" />
+    <PackageReference Include="Polly" Version="7.2.2" />
+    <PackageReference Include="Quartz" Version="3.3.3" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="3.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain.BuildingBlocks.Application\Domain.BuildingBlocks.Application.csproj" />
+    <ProjectReference Include="..\Domain.BuildingBlocks.EventBus\Domain.BuildingBlocks.EventBus.csproj" />
+    <ProjectReference Include="..\Domain.BuildingBlocks.Infrastructure\Domain.BuildingBlocks.Infrastructure.csproj" />
+    <ProjectReference Include="..\User.Application\User.Application.csproj" />
+    <ProjectReference Include="..\User.Domain\User.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
