@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>{{'CALENDAR.ADDEDIT.ADDTITLE' | translate}}</h2>
+<mat-dialog-content>
+  <calendar-form #calendarForm></calendar-form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <div class="row">
+    <div class="col">
+      <button mat-raised-button mat-dialog-close>{{'CALENDAR.ADDEDIT.CANCEL' | translate}}</button>
+      <button mat-raised-button color="primary" [disabled]="calendarForm.myForm.invalid" (click)="Addcalendar()">{{'CALENDAR.ADDEDIT.SAVE' | translate}}</button>
+    </div>
+  </div>
+</mat-dialog-actions>

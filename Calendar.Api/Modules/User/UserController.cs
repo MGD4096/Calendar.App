@@ -21,7 +21,7 @@ namespace Calendar.Api.Modules.User
         {
             _userModule = userModule;
         }
-        [HttpPost("")]
+        [HttpPut("")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<IActionResult> Register([FromForm]AddUserRequest request)
         {

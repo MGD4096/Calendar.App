@@ -1,0 +1,10 @@
+<form [formGroup]="myForm">
+    <mat-form-field class="w-100">
+      <mat-label>{{'CALENDAR.ADDEDIT.NAME' | translate}}</mat-label>
+      <input type="text" matInput formControlName="calendarName">
+    </mat-form-field>
+    <mat-form-field class="w-100">
+      <mat-label>{{'CALENDAR.ADDEDIT.DESCRIPTION' | translate}}</mat-label>
+      <input type="text" matInput formControlName="calendarDescription">
+    </mat-form-field>
+</form>

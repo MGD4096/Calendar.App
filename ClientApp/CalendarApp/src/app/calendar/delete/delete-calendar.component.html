@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>{{'CALENDAR.DELETE.TITLE' | translate}}</h2>
+<mat-dialog-content>
+  <h5 style="padding:15px">{{'CALENDAR.DELETE.DESCRIPTION' | translate}}</h5>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <div class="row">
+    <div class="col">
+      <button mat-raised-button mat-dialog-close>{{'CALENDAR.DELETE.CANCEL' | translate}}</button>
+      <button mat-raised-button color="primary" (click)="DeleteCalendar()">{{'CALENDAR.DELETE.DELETE' | translate}}</button>
+    </div>
+  </div>
+</mat-dialog-actions>
