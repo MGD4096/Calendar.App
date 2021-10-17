@@ -21,6 +21,7 @@ using Calendar.Api.Configuration.Validation;
 using Autofac.Extensions.DependencyInjection;
 using Calendar.Api.Modules.Calendar;
 using Calendar.Infrastructure.Configuration;
+using User.Infrastructure.Configuration;
 
 namespace Calendar.Api
 {
@@ -38,7 +39,7 @@ namespace Calendar.Api
                 .AddJsonFile("appsettings.json")
                 //  .AddJsonFile($"appsettings.{env.EnvironmentName}.json")
                 //.AddUserSecrets<Startup>()
-                .AddEnvironmentVariables("Device_")
+                .AddEnvironmentVariables("Calendar_")
                 .Build();
             _loggerForApi.Information("Connection string:" + Configuration[CalendarConnectionString]);
         }
@@ -107,6 +108,12 @@ namespace Calendar.Api
             var executionContextAccessor = new ExecutionContextAccessor(httpContextAccessor);
             var emailsConfiguration = new EmailsConfiguration(Configuration["EmailsConfiguration:FromEmail"]);
             CalendarStartup.Initialize(
+                Configuration[CalendarConnectionString],
+                executionContextAccessor,
+                _logger,
+                emailsConfiguration,
+                null);
+            UserStartup.Initialize(
                 Configuration[CalendarConnectionString],
                 executionContextAccessor,
                 _logger,

@@ -23,6 +23,8 @@
   <ItemGroup>
     <ProjectReference Include="..\Calendar.Infrastructure\Calendar.Infrastructure.csproj" />
     <ProjectReference Include="..\Domain.BuildingBlocks.Infrastructure\Domain.BuildingBlocks.Infrastructure.csproj" />
+    <ProjectReference Include="..\User.Application\User.Application.csproj" />
+    <ProjectReference Include="..\User.Infrastructure\User.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
